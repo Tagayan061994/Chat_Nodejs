@@ -17,9 +17,9 @@ io.on('connection', function (socket) {
         messages.push(data);
         io.sockets.emit("display message", data);
     });
-    socket.on("delete message", function (data) {
+    socket.on("delete message", function () {
         messages =[];
-        io.sockets.emit("delete message", data);
+        io.sockets.emit("delete from your message");
     });
  });
 
